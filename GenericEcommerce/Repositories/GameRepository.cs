@@ -25,7 +25,9 @@ namespace GenericEcommerce.Repositories
 
         public Game GetGameById(int id)
         {
-            return _context.Games.Where(x => x.GameId == id).FirstOrDefault();
+            return _context.Games
+                        .Where(x => x.GameId == id)
+                        .FirstOrDefault();
         }
     }
 }
