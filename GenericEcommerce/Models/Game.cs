@@ -40,8 +40,9 @@ namespace GenericEcommerce.Models
         [Display(Name = "Preço")]
         public decimal Price { get; set; }
 
-        public long CategoryId { get; set; }
+        public int CategoryId { get; set; }
 
+        [ForeignKey("CategoryId")]
         public Category? Category { get; set; }
     }
 }
