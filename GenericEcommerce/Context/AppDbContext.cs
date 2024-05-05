@@ -9,6 +9,7 @@ namespace GenericEcommerce.Context
 
         public DbSet<Game> Games { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<ItemShoppingCart> ItemsShoppingCart { get; set; }
 
     }
 }

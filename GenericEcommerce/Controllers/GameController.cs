@@ -1,4 +1,5 @@
 ﻿using GenericEcommerce.Interfaces;
+using GenericEcommerce.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GenericEcommerce.Controllers
@@ -14,9 +15,27 @@ namespace GenericEcommerce.Controllers
 
         public IActionResult List()
         {
-            var games = _gameRepository.Games;
+            var gamesViewModel = new GameListViewModel();
+            gamesViewModel.Games = _gameRepository.Games;
 
-            return View(games);
+            if(gamesViewModel.Games != null)
+            {
+                foreach (var item in gamesViewModel.Games)
+                {
+                    var category = item.Category;
+                    if (category?.CategoryId > 0)
+                    {
+                        gamesViewModel.CurrentCategory = category?.Name; 
+                    }
+                    else
+                    {
+                        gamesViewModel.CurrentCategory = "Categoria Atual";
+                    }
+                }
+            }
+            
+
+            return View(gamesViewModel);
         }
     }
 }

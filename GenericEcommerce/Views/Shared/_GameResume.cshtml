@@ -1,0 +1,8 @@
+﻿@model Game
+
+<div class="col-md-4 col-lg-4 col-sm-4">
+    <p><img src="@Model.ImageURL" style="height:220px; width:220px" class="img-fluid" /></p>
+    <h3>@Model.Price.ToString("c")</h3>
+    <span class="badge bg-info text-dark">@Model.Category?.Name</span>
+    <p>@Model.ShortDescription</p>
+</div>
