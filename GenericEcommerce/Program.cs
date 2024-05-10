@@ -1,5 +1,6 @@
 using GenericEcommerce.Context;
 using GenericEcommerce.Interfaces;
+using GenericEcommerce.Models;
 using GenericEcommerce.Repositories;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,6 +15,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddTransient<IGameRepository, GameRepository>();
 builder.Services.AddTransient<ICategoryRepository, CategoryRepository>();
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+builder.Services.AddScoped(x => ShoppingCart.GetCart(x));
 
 builder.Services.AddMemoryCache();
 builder.Services.AddSession();
