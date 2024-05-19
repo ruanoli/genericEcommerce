@@ -1,4 +1,6 @@
-﻿using GenericEcommerce.Models;
+﻿using GenericEcommerce.Interfaces;
+using GenericEcommerce.Models;
+using GenericEcommerce.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -6,10 +8,19 @@ namespace GenericEcommerce.Controllers
 {
     public class HomeController : Controller
     {   
+        private readonly IGameRepository _gameRepository;
+
+        public HomeController(IGameRepository gameRepository)
+        {
+            _gameRepository = gameRepository;
+        }
 
         public IActionResult Index()
         {
-            return View();
+            return View(new HomeViewModel()
+            {
+                FavoritesGame = _gameRepository.IsFavoritesGames
+            }) ;
         }
 
 

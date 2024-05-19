@@ -1,5 +1,6 @@
 ﻿using GenericEcommerce.Interfaces;
 using GenericEcommerce.Models;
+using GenericEcommerce.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GenericEcommerce.Controllers
@@ -17,7 +18,37 @@ namespace GenericEcommerce.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            _shoppingCart.Items = _shoppingCart.GetItemsToCart();
+
+            return View(new ShoppingCartViewModel()
+            {
+                ShoppingCart = _shoppingCart,
+                ShoppingCartTotal = _shoppingCart.GetShoppingCartTotal()
+            });
+        }
+
+        public IActionResult AddItemToCart(int gameId)
+        {
+            var game = _gameRepository.Games.FirstOrDefault(x => x.GameId == gameId);
+
+            if (game != null)
+            {
+                _shoppingCart.AddItemToCart(game);
+            }
+
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult RemoveItemToCart(int gameId)
+        {
+            var game = _gameRepository.Games.FirstOrDefault(x => x.GameId == gameId);
+
+            if (game != null)
+            {
+                _shoppingCart.RemoveItemToCart(game);
+            }
+
+            return RedirectToAction("Index");
         }
     }
 }

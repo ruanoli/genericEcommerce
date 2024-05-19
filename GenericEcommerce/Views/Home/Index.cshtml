@@ -1,5 +1,25 @@
-﻿@{
+﻿@model HomeViewModel
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <partial name="_Carousel">
+    &nbsp;&nbsp;&nbsp;
+
+    <h3>Mais Vendidos</h3>
+
+    @if (Model.FavoritesGame != null)
+    {
+        <div class="container">
+            <div class="row">
+                @foreach (var game in Model.FavoritesGame)
+                {
+                    <partial name="_GameResume" for="@game" />
+                }
+            </div>
+        </div>
+    }
+
+
+

@@ -108,11 +108,11 @@ namespace GenericEcommerce.Models
 
         public decimal GetShoppingCartTotal()
         {
-            return  _context.ItemsShoppingCart
+            var total =  _context.ItemsShoppingCart
                              .Where(x => x.ShoppingCartId == ShoppingCartId && x.Game != null)
                              .Select(x => x.Game.Price * x.Quantity)
                              .Sum();
-
+            return total;
         }
         #endregion
     }
