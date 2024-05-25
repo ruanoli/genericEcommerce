@@ -1,4 +1,5 @@
 ﻿using GenericEcommerce.Interfaces;
+using GenericEcommerce.Migrations;
 using GenericEcommerce.Models;
 using GenericEcommerce.ViewModels;
 using Microsoft.AspNetCore.Mvc;
@@ -19,6 +20,8 @@ namespace GenericEcommerce.Controllers
         public IActionResult Index()
         {
             _shoppingCart.Items = _shoppingCart.GetItemsToCart();
+
+
 
             return View(new ShoppingCartViewModel()
             {

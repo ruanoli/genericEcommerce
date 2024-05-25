@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "oe2zA4xFX7NTXqL0lZ6Ow8qKYYUxOJAKHZSm/KzvlGM=",
+  "Hash": "8n6gluL7UChV/b0xtsgbMlwKx/Fp1J13Y9GsQRIcwbw=",
   "Source": "GenericEcommerce",
   "BasePath": "_content/GenericEcommerce",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\ruan1\\OneDrive\\Área de Trabalho\\Projetos Web MVC\\GenericEcommerce\\GenericEcommerce\\wwwroot\\images\\ec5da6c3-e191-4018-8a7e-f1702270bdae.jpeg",
+      "SourceId": "GenericEcommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ruan1\\OneDrive\\Área de Trabalho\\Projetos Web MVC\\GenericEcommerce\\GenericEcommerce\\wwwroot\\",
+      "BasePath": "_content/GenericEcommerce",
+      "RelativePath": "images/ec5da6c3-e191-4018-8a7e-f1702270bdae.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\ec5da6c3-e191-4018-8a7e-f1702270bdae.jpeg"
     },
     {
       "Identity": "C:\\Users\\ruan1\\OneDrive\\Área de Trabalho\\Projetos Web MVC\\GenericEcommerce\\GenericEcommerce\\wwwroot\\images\\gow.jpg",

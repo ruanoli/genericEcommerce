@@ -1,0 +1,17 @@
+﻿@model ShoppingCartViewModel
+
+@if (Model.ShoppingCart?.Items?.Count > 0)
+{
+    @*
+        <span class="badge rounded-pill bg-danger">
+        </span>*@
+
+    <a asp-controller="ShoppingCart" asp-action="Index" type="button" class="btn btn-warning position-relative">
+        <i class="fa-solid fa-cart-shopping" style="text-decoration:none; color:white"></i>
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            @Model.ShoppingCart.Items.Count
+            <span class="visually-hidden">unread messages</span>
+        </span>
+    </a>
+
+}
