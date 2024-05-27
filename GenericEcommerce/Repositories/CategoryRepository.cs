@@ -15,6 +15,12 @@ namespace GenericEcommerce.Repositories
         }
 
         public IEnumerable<Category> Categories => _context.Categories;
+
+        public Category GetCategoryById(int id)
+        {
+            var category = _context.Categories.Where(x => x.CategoryId == id).FirstOrDefault();
+            return category;
+        }
         
     }
 }
