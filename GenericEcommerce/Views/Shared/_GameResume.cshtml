@@ -9,7 +9,7 @@
     </a>
     <h4>@Model.Price.ToString("c")</h4>
     <span class="badge bg-info text-dark">@Model.Category?.Name</span>
-    <a asp-controller="ShoppingCart" asp-action="AddItemToCart" asp-route-gameId="@Model.GameId">
+    <a asp-controller="ShoppingCart" asp-action="AddItemToCart" id="cartButton" asp-route-gameId="@Model.GameId">
         <span class="badge bg-success text-dark">Adicionar ao Carrinho</span>
     </a>
 </div>
