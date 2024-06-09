@@ -1,11 +1,13 @@
 ﻿using GenericEcommerce.Models;
+using GenericEcommerce.Repositories;
 using GenericEcommerce.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GenericEcommerce.Components
 {
     public class ResumeShoppingCart : ViewComponent
-    {private readonly ShoppingCart _shoppingCart;
+    {
+        private readonly ShoppingCart _shoppingCart;
 
         public ResumeShoppingCart(ShoppingCart shoppingCart)
         {
@@ -14,16 +16,17 @@ namespace GenericEcommerce.Components
 
         public IViewComponentResult Invoke()
         {
-            //_shoppingCart.Items = _shoppingCart.GetItemsToCart();
+            _shoppingCart.Items = _shoppingCart.GetItemsToCart();
 
-            _shoppingCart.Items = new List<ItemShoppingCart>()
-            {
-                new ItemShoppingCart(),
-                new ItemShoppingCart()
-            };
+            //_shoppingCart.Items = new List<ItemShoppingCart>()
+            //{
+            //    new ItemShoppingCart(),
+            //    new ItemShoppingCart()
+            //};
 
             return View(new ShoppingCartViewModel()
             {
+                Quantity = _shoppingCart.GetShoppingCartQuantityItemsl(),
                 ShoppingCart = _shoppingCart,
                 ShoppingCartTotal = _shoppingCart.GetShoppingCartTotal()
             });

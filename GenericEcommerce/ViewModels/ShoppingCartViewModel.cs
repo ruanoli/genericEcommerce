@@ -6,5 +6,6 @@ namespace GenericEcommerce.ViewModels
     {
         public ShoppingCart? ShoppingCart { get; set; }
         public decimal ShoppingCartTotal { get; set; }
+        public int Quantity { get; set; }
     }
 }

@@ -25,21 +25,28 @@ namespace GenericEcommerce.Controllers
             { 
                 var category = _categoryRepository.GetCategoryById(categoryId);
 
-                games = _gameRepository.Games.Where(x => x.CategoryId == categoryId).OrderBy(x => x.Name).ToList();
-                currentyCategory = category.Name;
+                games = _gameRepository.GetGameByCategoryId(categoryId);
+                currentyCategory = string.IsNullOrEmpty(category.Name) ? "SEM NOME" : category.Name;
             }
             else
             {
-                games = _gameRepository.Games.OrderBy(x => x.Name);
+                games = _gameRepository.Games;
                 currentyCategory = "Todos os Games";
             }
 
 
             return View(new GameListViewModel
             {
-                Games = games,
+                Games = games.OrderBy(x => x.Name).ToList(),
                 CurrentCategory = currentyCategory
             });
+        }
+
+        public IActionResult Details(int gameId)
+        {
+            var game = _gameRepository.Games.Where(x => x.GameId == gameId).FirstOrDefault();
+
+            return View(game);
         }
     }
 }

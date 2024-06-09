@@ -49,10 +49,10 @@ namespace GenericEcommerce.Models
 
         public void AddItemToCart(Game game)
         {
-            var item = _context.ItemsShoppingCart.SingleOrDefault(
+            var item = _context.ItemsShoppingCart.Where(
                     x => x.Game != null && x.Game.GameId == game.GameId
                     && x.ShoppingCartId == ShoppingCartId
-                );
+                ).SingleOrDefault();
 
             if (item == null)
             {
@@ -111,6 +111,15 @@ namespace GenericEcommerce.Models
             var total =  _context.ItemsShoppingCart
                              .Where(x => x.ShoppingCartId == ShoppingCartId && x.Game != null)
                              .Select(x => x.Game.Price * x.Quantity)
+                             .Sum();
+            return total;
+        }
+
+        public int GetShoppingCartQuantityItemsl()
+        {
+            var total = _context.ItemsShoppingCart
+                             .Where(x => x.ShoppingCartId == ShoppingCartId && x.Game != null)
+                             .Select(x => x.Quantity)
                              .Sum();
             return total;
         }

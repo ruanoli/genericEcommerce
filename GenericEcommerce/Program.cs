@@ -42,6 +42,7 @@ app.MapControllerRoute(
     pattern: "Game/{action}/{category?}",
     defaults: new {Controller = "Game", action = "List"}
     );
+
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");

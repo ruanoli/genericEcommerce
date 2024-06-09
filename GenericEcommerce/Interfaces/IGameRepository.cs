@@ -7,5 +7,6 @@ namespace GenericEcommerce.Interfaces
         IList<Game> Games { get; }
         IList<Game> IsFavoritesGames { get; }
         Game GetGameById(int id);
+        IList<Game> GetGameByCategoryId(int categoryId);
     }
 }

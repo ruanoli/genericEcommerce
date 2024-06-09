@@ -21,12 +21,20 @@
       "PackagePath": "staticwebassets\\images\\gow.jpg"
     },
     {
+      "Id": "C:\\Users\\ruan1\\OneDrive\\Área de Trabalho\\Projetos Web MVC\\GenericEcommerce\\GenericEcommerce\\wwwroot\\images\\gowsemlogo.png",
+      "PackagePath": "staticwebassets\\images\\gowsemlogo.png"
+    },
+    {
       "Id": "C:\\Users\\ruan1\\OneDrive\\Área de Trabalho\\Projetos Web MVC\\GenericEcommerce\\GenericEcommerce\\wwwroot\\images\\r6.jpg",
       "PackagePath": "staticwebassets\\images\\r6.jpg"
     },
     {
-      "Id": "C:\\Users\\ruan1\\OneDrive\\Área de Trabalho\\Projetos Web MVC\\GenericEcommerce\\GenericEcommerce\\wwwroot\\images\\tlou2.jpg",
-      "PackagePath": "staticwebassets\\images\\tlou2.jpg"
+      "Id": "C:\\Users\\ruan1\\OneDrive\\Área de Trabalho\\Projetos Web MVC\\GenericEcommerce\\GenericEcommerce\\wwwroot\\images\\re3.png",
+      "PackagePath": "staticwebassets\\images\\re3.png"
+    },
+    {
+      "Id": "C:\\Users\\ruan1\\OneDrive\\Área de Trabalho\\Projetos Web MVC\\GenericEcommerce\\GenericEcommerce\\wwwroot\\images\\tlo2semlogo.png",
+      "PackagePath": "staticwebassets\\images\\tlo2semlogo.png"
     },
     {
       "Id": "C:\\Users\\ruan1\\OneDrive\\Área de Trabalho\\Projetos Web MVC\\GenericEcommerce\\GenericEcommerce\\wwwroot\\js\\site.js",

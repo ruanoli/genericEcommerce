@@ -1,8 +1,15 @@
 ﻿@model Game
 
 <div class="col-md-4 col-lg-4 col-sm-4">
-    <p><img src="@Model.ImageURL" style="height:220px; width:220px" class="img-fluid" /></p>
-    <h3>@Model.Price.ToString("c")</h3>
+    <a asp-controller="Game" asp-action="Details" asp-route-gameId="@Model.GameId"> 
+        <p><img src="@Model.ImageURL" style="height:220px; width:220px" class="img-fluid" /></p>
+    </a>
+    <a asp-controller="Game" asp-action="Details" asp-route-gameId="@Model.GameId" style="text-decoration:none">
+        <h4>@Model.Name</h4>
+    </a>
+    <h4>@Model.Price.ToString("c")</h4>
     <span class="badge bg-info text-dark">@Model.Category?.Name</span>
-    <p>@Model.ShortDescription</p>
+    <a asp-controller="ShoppingCart" asp-action="AddItemToCart" asp-route-gameId="@Model.GameId">
+        <span class="badge bg-success text-dark">Adicionar ao Carrinho</span>
+    </a>
 </div>

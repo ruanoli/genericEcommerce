@@ -3,6 +3,7 @@ using GenericEcommerce.Migrations;
 using GenericEcommerce.Models;
 using GenericEcommerce.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 
 namespace GenericEcommerce.Controllers
 {
@@ -32,14 +33,16 @@ namespace GenericEcommerce.Controllers
 
         public IActionResult AddItemToCart(int gameId)
         {
-            var game = _gameRepository.Games.FirstOrDefault(x => x.GameId == gameId);
+            var game = _gameRepository.Games
+                .Where(x => x.GameId == gameId)
+                .FirstOrDefault();
 
             if (game != null)
             {
                 _shoppingCart.AddItemToCart(game);
             }
 
-            return RedirectToAction("Index");
+            return RedirectToAction("List", "Game");
         }
 
         public IActionResult RemoveItemToCart(int gameId)
