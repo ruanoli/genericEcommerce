@@ -38,5 +38,12 @@ namespace GenericEcommerce.Repositories
                         .ToList();
             return games;
         }
+
+        public IList<Game> GetGameByName(string name)
+        {
+            var game = _context.Games.Where(x => x.Name.Contains(name.ToLower())).ToList();
+
+            return game;
+        }
     }
 }

@@ -1,18 +1,36 @@
 ﻿@model GameListViewModel
 
-<div class="row">
-    <div class="mb-3 col-md-8">
-        <h2>@Model.CurrentCategory</h2>
+<div class="container">
+    <div class="row">
+        <div class="mb-3 col-md-8">
+            @await Component.InvokeAsync("MenuCategory")
 
-    </div>
+        </div>
 
-    <div class="mb-3 col-md-4">
-        @await Component.InvokeAsync("MenuCategory")
+        <div class="col-md-4">
+            <form class="navbar-form navbar-right" asp-controller="Game" asp-action="Search" method="get">
+                <div class="form-group">
 
+                    <input type="text" class="form-control" placeholder="Pesquisar" name="search">
+
+                </div>
+            </form>
+        </div>
+
+
+        
     </div>
 </div>
 
 
+<div class="container">
+    <div class="row">
+        <div class="mb-3 align-content-center">
+            <h2>@Model.CurrentCategory</h2>
+
+        </div>
+    </div>
+</div>
 
 
 <div class="container">

@@ -48,5 +48,37 @@ namespace GenericEcommerce.Controllers
 
             return View(game);
         }
+
+        public IActionResult Search(string  search)
+        {
+            IList<Game> games = new List<Game>();
+            string currentyCategory = string.Empty;
+
+            if (string.IsNullOrEmpty(search))
+            {
+                games = _gameRepository.Games;
+                currentyCategory = "Todos os Games";
+            }
+            else
+            {
+                games = _gameRepository.GetGameByName(search);
+
+                if(games.Count > 0)
+                {
+                    currentyCategory = "Resultado da Pesquisa";
+                }
+                else
+                {
+                    currentyCategory = "Nenhum game foi encontrado.";
+                }
+
+            }
+
+            return View("~/Views/Game/List.cshtml", new GameListViewModel()
+            {
+                Games = games,
+                CurrentCategory = currentyCategory
+            });
+        }
     }
 }
