@@ -6,13 +6,14 @@ namespace GenericEcommerce.Models
 {
     public class Order
     {
+
         public long OrderId { get; set; }
 
         [Required(ErrorMessage = "Campo Obrigatório!")]
         [StringLength(50)]
         [Display(Name = "Nome")]
         public string? Name { get; set; }
-       
+
         [Required(ErrorMessage = "Campo Obrigatório!")]
         [StringLength(50)]
         [Display(Name = "Sobrenome")]

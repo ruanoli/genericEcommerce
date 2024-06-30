@@ -251,3 +251,4 @@ C:\Users\ruan1\OneDrive\Área de Trabalho\Projetos Web MVC\GenericEcommerce\Gene
 C:\Users\ruan1\OneDrive\Área de Trabalho\Projetos Web MVC\GenericEcommerce\GenericEcommerce\obj\Debug\net7.0\GenericEcommerce.pdb
 C:\Users\ruan1\OneDrive\Área de Trabalho\Projetos Web MVC\GenericEcommerce\GenericEcommerce\obj\Debug\net7.0\GenericEcommerce.genruntimeconfig.cache
 C:\Users\ruan1\OneDrive\Área de Trabalho\Projetos Web MVC\GenericEcommerce\GenericEcommerce\obj\Debug\net7.0\ref\GenericEcommerce.dll
+C:\Users\ruan1\OneDrive\Área de Trabalho\Projetos Web MVC\GenericEcommerce\GenericEcommerce\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll

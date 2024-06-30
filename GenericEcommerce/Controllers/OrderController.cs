@@ -45,15 +45,27 @@ namespace GenericEcommerce.Controllers
 
             if (ModelState.IsValid)
             {
-                _orderRepository.CreateOrder(order);
-
-                ViewBag.CheckoutMessage = "Pedido realizado com sucesso!";
-                ViewBag.TotalOrder = _shoppingCart.GetShoppingCartTotal();
+                _orderRepository.CreateOrder(order);             
 
                 _shoppingCart.CleanCart();
 
-                return View("~/Views/CompleteCheckout.cshtml", order);
+                return RedirectToAction("CompleteCheckout", new {orderId = order.OrderId});
             }
+
+            return View(order);
+        }
+
+        public IActionResult CompleteCheckout(long orderId)
+        {
+            if(orderId == 0)
+            {
+                return NotFound();
+            }
+
+            var order = _orderRepository.GetOrderById(orderId);
+            ViewBag.CheckoutMessage = "Pedido realizado com sucesso!";
+
+            ViewBag.TotalOrder = order.TotalOrderValue;
 
             return View(order);
         }
