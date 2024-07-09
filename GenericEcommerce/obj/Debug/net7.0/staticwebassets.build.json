@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "V/3ySyZBROz6PdoJZv1uG/odL6WCriE2DUcmt0KpTPo=",
+  "Hash": "LRgWa1igVQESIsKeQQOt5HVZyRxCo+CFIYmlcnLcWMc=",
   "Source": "GenericEcommerce",
   "BasePath": "_content/GenericEcommerce",
   "Mode": "Default",
@@ -136,6 +136,40 @@
       "OriginalItemSpec": "wwwroot\\images\\gowsemlogo.png"
     },
     {
+      "Identity": "C:\\Users\\ruan1\\OneDrive\\Área de Trabalho\\Projetos Web MVC\\GenericEcommerce\\GenericEcommerce\\wwwroot\\images\\laptop_8515501.png",
+      "SourceId": "GenericEcommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ruan1\\OneDrive\\Área de Trabalho\\Projetos Web MVC\\GenericEcommerce\\GenericEcommerce\\wwwroot\\",
+      "BasePath": "_content/GenericEcommerce",
+      "RelativePath": "images/laptop_8515501.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\laptop_8515501.png"
+    },
+    {
+      "Identity": "C:\\Users\\ruan1\\OneDrive\\Área de Trabalho\\Projetos Web MVC\\GenericEcommerce\\GenericEcommerce\\wwwroot\\images\\privacy_2133152.png",
+      "SourceId": "GenericEcommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ruan1\\OneDrive\\Área de Trabalho\\Projetos Web MVC\\GenericEcommerce\\GenericEcommerce\\wwwroot\\",
+      "BasePath": "_content/GenericEcommerce",
+      "RelativePath": "images/privacy_2133152.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\privacy_2133152.png"
+    },
+    {
       "Identity": "C:\\Users\\ruan1\\OneDrive\\Área de Trabalho\\Projetos Web MVC\\GenericEcommerce\\GenericEcommerce\\wwwroot\\images\\r6.jpg",
       "SourceId": "GenericEcommerce",
       "SourceType": "Discovered",
@@ -185,6 +219,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\tlo2semlogo.png"
+    },
+    {
+      "Identity": "C:\\Users\\ruan1\\OneDrive\\Área de Trabalho\\Projetos Web MVC\\GenericEcommerce\\GenericEcommerce\\wwwroot\\images\\web_16718330.png",
+      "SourceId": "GenericEcommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ruan1\\OneDrive\\Área de Trabalho\\Projetos Web MVC\\GenericEcommerce\\GenericEcommerce\\wwwroot\\",
+      "BasePath": "_content/GenericEcommerce",
+      "RelativePath": "images/web_16718330.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\web_16718330.png"
     },
     {
       "Identity": "C:\\Users\\ruan1\\OneDrive\\Área de Trabalho\\Projetos Web MVC\\GenericEcommerce\\GenericEcommerce\\wwwroot\\js\\site.js",
