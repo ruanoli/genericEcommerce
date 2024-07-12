@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LRgWa1igVQESIsKeQQOt5HVZyRxCo+CFIYmlcnLcWMc=",
+  "Hash": "u04MLhYDyX/LU+FI9Mi1lR4rcSsDgaxNe2fJFbVlOr4=",
   "Source": "GenericEcommerce",
   "BasePath": "_content/GenericEcommerce",
   "Mode": "Default",
@@ -219,6 +219,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\tlo2semlogo.png"
+    },
+    {
+      "Identity": "C:\\Users\\ruan1\\OneDrive\\Área de Trabalho\\Projetos Web MVC\\GenericEcommerce\\GenericEcommerce\\wwwroot\\images\\user_166252.png",
+      "SourceId": "GenericEcommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ruan1\\OneDrive\\Área de Trabalho\\Projetos Web MVC\\GenericEcommerce\\GenericEcommerce\\wwwroot\\",
+      "BasePath": "_content/GenericEcommerce",
+      "RelativePath": "images/user_166252.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\user_166252.png"
     },
     {
       "Identity": "C:\\Users\\ruan1\\OneDrive\\Área de Trabalho\\Projetos Web MVC\\GenericEcommerce\\GenericEcommerce\\wwwroot\\images\\web_16718330.png",

@@ -80,5 +80,14 @@ namespace GenericEcommerce.Controllers
 
             return View(loginViewModel);
         }
+
+        public async Task<IActionResult> Logout()
+        {
+            HttpContext.Session.Clear();
+            HttpContext.User = null;
+            await _signInManager.SignOutAsync();
+
+            return RedirectToAction("Index", "Home");
+        }
     }
 }

@@ -30,11 +30,14 @@
                         <li class="nav-item">
                             <a class="nav-link text-light" asp-area="" asp-controller="Contact" asp-action="Index">Contato</a>
                         </li>
+
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
                                 @await Component.InvokeAsync("ResumeShoppingCart")
                             </li>
                         </ul>
+
+                        @await Html.PartialAsync("_loginPartial")
                     </ul>
                 </div>
             </div>
