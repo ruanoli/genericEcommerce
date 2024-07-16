@@ -44,10 +44,17 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
+
+app.MapControllerRoute(
+  name: "areas",
+  pattern: "{area:exists}/{controller=Admin}/{action=Index}/{id?}"
+);
+
+
 app.MapControllerRoute(
     name: "categoryFilter",
     pattern: "Game/{action}/{category?}",
-    defaults: new {Controller = "Game", action = "List"}
+    defaults: new { Controller = "Game", action = "List" }
     );
 
 app.MapControllerRoute(

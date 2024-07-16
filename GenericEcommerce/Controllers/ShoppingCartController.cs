@@ -2,11 +2,13 @@
 using GenericEcommerce.Migrations;
 using GenericEcommerce.Models;
 using GenericEcommerce.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 
 namespace GenericEcommerce.Controllers
 {
+    [Authorize]
     public class ShoppingCartController : Controller
     {
         private readonly IGameRepository _gameRepository;
@@ -31,6 +33,7 @@ namespace GenericEcommerce.Controllers
             });
         }
 
+        [AllowAnonymous]
         public IActionResult AddItemToCart(int gameId)
         {
             var game = _gameRepository.Games

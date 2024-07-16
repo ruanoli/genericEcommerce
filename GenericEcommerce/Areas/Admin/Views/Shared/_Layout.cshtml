@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - GameLandia</title>
+    <title>@ViewData["Title"] - Admin</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/GenericEcommerce.styles.css" asp-append-version="true" />
@@ -22,22 +22,17 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Início</a>
+                            <a class="nav-link text-light" asp-area="Admin" asp-controller="Admin" asp-action="Index">Início</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Game" asp-action="List">Jogos</a>
+                            <a class="nav-link text-light" asp-area="Admin" asp-controller="AdminGame" asp-action="Index">Jogos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Contact" asp-action="Index">Contato</a>
+                            <a class="nav-link text-light" asp-area="Admin" asp-controller="AdminCategory" asp-action="Index">Categorias</a>
                         </li>
-
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item">
-                                @await Component.InvokeAsync("ResumeShoppingCart")
-                            </li>
-                        </ul>
-
-                        @await Html.PartialAsync("_loginPartial")
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="Admin" asp-controller="AdminOrder" asp-action="Index">Pedidos</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -51,7 +46,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2024 - Desenvolvido por Ruan Oliveira <a href="https://www.instagram.com/eu.ruanoliveira/"><img src="~/images/instagram_1409946.png" /></a>
+            &copy; 2024 - Desenvolvido por Ruan Oliveira <a href="https://www.instagram.com/eu.ruanoliveira/"><img src="~/images/instagram_1409946.png" />
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
