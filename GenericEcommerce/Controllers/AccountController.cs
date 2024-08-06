@@ -1,7 +1,9 @@
-﻿using GenericEcommerce.ViewModels;
+﻿using GenericEcommerce.Models;
+using GenericEcommerce.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using System.Runtime.Intrinsics.X86;
 
 namespace GenericEcommerce.Controllers
 {
@@ -27,14 +29,14 @@ namespace GenericEcommerce.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel loginViewModel)
         {
-            if(!ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 return View(loginViewModel);
             }
 
             var user = await _userManager.FindByNameAsync(loginViewModel.UserName);
 
-            if(user != null)
+            if (user != null)
             {
                 var result = await _signInManager.PasswordSignInAsync(user, loginViewModel.Password, false, false);
 
@@ -55,21 +57,27 @@ namespace GenericEcommerce.Controllers
 
         public IActionResult Register()
         {
-            return View();
+            LoginViewModel loginViewModel = new LoginViewModel();
+
+
+            return View(loginViewModel);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken] //Evita ataques CSRS requisições fakes feitas por hakers
         public async Task<IActionResult> Register(LoginViewModel loginViewModel)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 var user = new IdentityUser { UserName = loginViewModel.UserName };
 
                 var result = await _userManager.CreateAsync(user, loginViewModel.Password);
 
-                if(result.Succeeded)
+
+                if (result.Succeeded)
                 {
+                    await _userManager.AddToRoleAsync(user, "Member");
+
                     return RedirectToAction("Login", "Account");
                 }
                 else
@@ -88,6 +96,11 @@ namespace GenericEcommerce.Controllers
             await _signInManager.SignOutAsync();
 
             return RedirectToAction("Index", "Home");
+        }
+
+        public IActionResult AccessDenied()
+        {
+            return View("AccessDenied");
         }
     }
 }

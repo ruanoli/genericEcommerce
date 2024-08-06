@@ -31,6 +31,14 @@
                             <a class="nav-link text-light" asp-area="" asp-controller="Contact" asp-action="Index">Contato</a>
                         </li>
 
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-light" asp-area="" asp-controller="Admin" asp-action="Index">Admin</a>
+                            </li>
+                        }
+                        
+
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
                                 @await Component.InvokeAsync("ResumeShoppingCart")
